@@ -229,6 +229,18 @@ class UserImpersonationTokenManager(NoUpdateMixin, RESTManager):
     _list_filters = ("state",)
 
 
+class UserPersonalAccessToken(ObjectDeleteMixin, RESTObject):
+    pass
+
+
+class UserPersonalAccessTokenManager(NoUpdateMixin, RESTManager):
+    _path = "/users/%(user_id)s/personal_access_tokens"
+    _obj_cls = UserPersonalAccessToken
+    _from_parent_attrs = {"user_id": "id"}
+    _create_attrs = (("name", "scopes"), ("expires_at",))
+    _list_filters = ("state",)
+
+
 class UserMembership(RESTObject):
     _id_attr = "source_id"
 

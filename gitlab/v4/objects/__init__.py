@@ -345,6 +345,7 @@ class User(SaveMixin, ObjectDeleteMixin, RESTObject):
         ("gpgkeys", "UserGPGKeyManager"),
         ("identityproviders", "UserIdentityProviderManager"),
         ("impersonationtokens", "UserImpersonationTokenManager"),
+        ("personalaccesstokens", "UserPersonalAccessTokenManager"),
         ("keys", "UserKeyManager"),
         ("memberships", "UserMembershipManager"),
         ("projects", "UserProjectManager"),

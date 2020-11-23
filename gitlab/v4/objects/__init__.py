@@ -333,6 +333,7 @@ class User(SaveMixin, ObjectDeleteMixin, RESTObject):
         ("events", "UserEventManager"),
         ("gpgkeys", "UserGPGKeyManager"),
         ("impersonationtokens", "UserImpersonationTokenManager"),
+        ("personalaccesstokens", "UserPersonalAccessTokenManager"),
         ("keys", "UserKeyManager"),
         ("memberships", "UserMembershipManager"),
         ("projects", "UserProjectManager"),
